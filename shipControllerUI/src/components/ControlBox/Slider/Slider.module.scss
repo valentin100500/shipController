@@ -1,0 +1,21 @@
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  opacity: 0.5; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  height: 20px;
+  background: #d4d4d4;
+  border-radius: 10px;
+  outline: none;
+}
+.slider:hover {
+  opacity: .8; /* Fully shown on mouse-over */
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #949191;
+  cursor: pointer;
+}

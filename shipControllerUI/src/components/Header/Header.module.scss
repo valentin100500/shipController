@@ -1,0 +1,35 @@
+.navigation {
+  font-size: 1.3em;
+
+  a {
+    padding: 0 4px 0 4px;
+    outline: none;
+    color: #b7b4b4;
+    text-decoration: none;
+    margin-left: 4px;
+  }
+
+  a:hover {
+    color: #949191;
+  }
+
+  a.active {
+    color: #eaeaea;
+    background-color: #949191;
+    border-radius: 2px;
+  }
+
+  .toggle {
+    margin-bottom: 8px;
+  }
+
+  .navImage {
+    height: 35px;
+    margin-right: 12px;
+  }
+  .title {
+
+  }
+}
+
+

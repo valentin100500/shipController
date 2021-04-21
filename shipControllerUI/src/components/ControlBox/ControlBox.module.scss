@@ -1,0 +1,59 @@
+.controlBox {
+  margin: 0 auto;
+  text-align: center;
+  width: 340px;
+  height: 255px;
+  padding: 0;
+}
+
+.battery {
+  position: relative;
+  top: -300px;
+  left: 155px;
+  z-index: 1;
+}
+
+.verticalSlider {
+  width: 220px;
+  z-index: 2;
+  transform-origin: left;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  position: relative;
+  top: 220px;
+  left: -38px;
+
+}
+
+.horizontalSlider {
+  transform-origin: left;
+  width: 220px;
+  z-index: 2;
+  position: relative;
+  top: 285px;
+  left: 60px;
+}
+
+@media screen and (min-width: 576px) {
+  .controlBox {
+    margin-top: 20px;
+    width: 545px;
+    height: 410px;
+  }
+  .verticalSlider {
+    top: 300px;
+    left: -252px;
+  }
+
+  .horizontalSlider {
+    top: 368px;
+    left: 270px;
+  }
+  .battery {
+    top: -460px;
+    left: 260px;
+  }
+}

@@ -1,0 +1,28 @@
+.indexes {
+  padding: 6px;
+}
+.battery {
+
+}
+
+.card {
+  margin-bottom: 6px;
+}
+
+.cardText {
+  text-align: left;
+  display: block;
+  .item {
+    .title {
+      display: inline-block;
+      color: #d4d4d4;
+    }
+
+    .value {
+      display: inline-block;
+      margin-left: 12px;
+      font-size: large;
+      font-weight: bold;
+    }
+  }
+}

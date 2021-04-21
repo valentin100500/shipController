@@ -1,0 +1,7 @@
+.buttonPanel {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  grid-gap: 2vw;
+  justify-content: center;
+}

@@ -1,0 +1,8 @@
+#ifndef SHIP_IDS
+#define SHIP_IDS
+
+#define ID_MAIN_HELM "ID_MAIN_HELM"
+#define ID_MAIN_MOTOR "ID_MAIN_MOTOR"
+#define ID_CHARGE_LEVEL "ID_CHARGE_LEVEL"
+
+#endif

@@ -1,0 +1,21 @@
+.buttonContainer{
+  width: 110px;
+  height: 110px;
+  border-radius: 8%;
+  background: #7b8083;
+  opacity: .75;
+  cursor: pointer;
+}
+.buttonContainer:hover {
+  opacity: 1;
+}
+
+.icon {
+  font-size: 80px;
+  margin: 0 auto;
+  vertical-align: center;
+}
+.title {
+  color: #050505;
+  font-size: 1.2rem;
+}
