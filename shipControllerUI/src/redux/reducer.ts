@@ -12,7 +12,7 @@ import {
 } from "./types";
 import {Action} from "./actions";
 
-type State = {
+export type State = {
     chargeLevel: number | undefined,
     runValue: number,
     turnValue: number,
@@ -29,7 +29,7 @@ type State = {
     }
 }
 
-const initialState: State = {
+export const initialState: State = {
     chargeLevel: undefined,
     runValue: 0,
     turnValue: 0,

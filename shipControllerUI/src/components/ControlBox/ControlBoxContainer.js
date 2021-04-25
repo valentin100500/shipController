@@ -4,7 +4,7 @@ import ControlBox from "./ControlBox";
 import {
     onPointerUpRun,
     onPointerUpTurn,
-    setChargeLevel, setIsInitGetCharge, setIsTranslatedVideo,
+    setChargeLevel, setIsInitGetCharge,
     setRequestRunFalse,
     setRequestRunTrue,
     setRequestTurnFalse,

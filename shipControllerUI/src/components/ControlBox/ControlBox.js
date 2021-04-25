@@ -6,7 +6,6 @@ import Display from "./Display/Display";
 import Battery from "./Battery/Battery";
 
 const ControlBox = (props) => {
-    console.log(props.valueTurn, props.valueRun)
     return (
         <>
             <div

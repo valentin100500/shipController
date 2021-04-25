@@ -13,7 +13,7 @@ import {
 
 export type Action = {
     type: string,
-    payload: number | boolean | undefined
+    payload?: number | boolean
 }
 
 export const setRequestRunFalse = (): Action | any => ({type: SET_REQUEST_RUN_FALSE})
