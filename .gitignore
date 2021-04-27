@@ -8,3 +8,4 @@
 shipControllerUI/.idea/
 shipControllerUI/build/
 shipControllerUI/node_modules/
+src/ShipAPI/StaticFiles.h
