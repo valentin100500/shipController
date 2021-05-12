@@ -10,15 +10,14 @@ class ShipAPI
 private:
 public:
     ShipAPI();
-    void init ();
+    void init();
     Controller controller;
     void begin();
 };
 
-
 /////// Handlers //////
 
-void getChargeLevel (Request &req, Response &res);
+void getChargeLevel(Request &req, Response &res);
 
 void setValueTurn(Request &req, Response &res);
 

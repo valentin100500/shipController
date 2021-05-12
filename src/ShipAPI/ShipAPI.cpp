@@ -8,13 +8,13 @@ Application app;
 ShipAPI *localShipAPI;
 bool isShipAPIDef = false;
 
-ShipAPI::ShipAPI (){}
+ShipAPI::ShipAPI() {}
 
-void ShipAPI::init ()
+void ShipAPI::init()
 {
     if (!isShipAPIDef)
     {
-        app.use(staticFiles());                           //Підключення React.js UI
+        app.use(staticFiles()); //Підключення React.js UI
 
         ////Adding API endpoints
         app.get("/api/charge-level", &getChargeLevel);
@@ -25,49 +25,49 @@ void ShipAPI::init ()
         app.get("/settings", &static_index);
         app.notFound(&static_index);
 
-        server.begin();                                   //Запуск WEB сервера 
+        server.begin(); //Запуск WEB сервера
 
         localShipAPI = this;
         isShipAPIDef = true;
-        #ifdef DEVELOP
+#ifdef DEVELOP
         Serial.println("Server init");
-        #endif
+#endif
     }
 }
 
 void ShipAPI::begin()
 {
     WiFiClient client = server.available();
-    if (client.connected()) {
+    if (client.connected())
+    {
         app.process(&client);
     }
 }
 
-String queryParse(Request &req, char *query){
-    char valueBuf [5];
+String queryParse(Request &req, char *query)
+{
+    char valueBuf[5];
     req.query(query, valueBuf, 5);
     return String(valueBuf);
 }
 
 /////// Handlers //////
 
-void getChargeLevel (Request &req, Response &res) {
+void getChargeLevel(Request &req, Response &res)
+{
     Serial.println("Charge value ");
     res.print(String(localShipAPI->controller.get(ID_CHARGE_LEVEL)));
-    res.print("40");
-    res.status(200);
-}   
-
-void setValueTurn(Request &req, Response &res) {
-
-    int valueTurn = queryParse(req, "valueTurn").toInt();
-    Serial.println("Turn value " + String(valueTurn));
-    localShipAPI->controller.set(ID_MAIN_HELM, String(valueTurn));
     res.status(200);
 }
 
-void setValueRun(Request &req, Response &res) {
-    int valueRun = queryParse(req, "valueRun").toInt();
-    localShipAPI->controller.set(ID_MAIN_MOTOR, String(valueRun));
+void setValueTurn(Request &req, Response &res)
+{
+    localShipAPI->controller.set(ID_MAIN_HELM, queryParse(req, "valueTurn"));
+    res.status(200);
+}
+
+void setValueRun(Request &req, Response &res)
+{
+    localShipAPI->controller.set(ID_MAIN_MOTOR, queryParse(req, "valueRun"));
     res.status(200);
 }

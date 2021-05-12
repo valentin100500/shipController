@@ -4,14 +4,15 @@
 #include "../Controller/ModuleShip.h"
 #include "ESP32Servo.h"
 
-class Helm: public ModuleShip
+class Helm : public ModuleShip
 {
 private:
     int mapingRunValue(int);
     Servo servo;
+
 public:
     Helm(String, uint8_t);
-    ~Helm(){}
+    ~Helm() {}
     void set(String value) override;
     String get() override;
 };

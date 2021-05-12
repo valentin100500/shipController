@@ -11,15 +11,17 @@ Helm helm = Helm(ID_MAIN_HELM, 18);
 ShipAPI shipAPI = ShipAPI();
 GetChangeLevel chLevel = GetChangeLevel(ID_CHARGE_LEVEL, 34);
 
-void setup() {
+void setup()
+{
   Serial.begin(115200);
-  WiFiInit();         //Ініціалізація Wi-fi AP
+  WiFiInit(); //Ініціалізація Wi-fi AP
 
   shipAPI.controller.use(&helm);
   shipAPI.controller.use(&motor);
   shipAPI.init();
 }
 
-void loop() {
+void loop()
+{
   shipAPI.begin();
 }
