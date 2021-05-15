@@ -55,7 +55,6 @@ String queryParse(Request &req, char *query)
 
 void getChargeLevel(Request &req, Response &res)
 {
-    Serial.println("Charge value ");
     res.print(String(localShipAPI->controller.get(ID_CHARGE_LEVEL)));
     res.status(200);
 }
