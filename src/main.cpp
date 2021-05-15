@@ -8,6 +8,8 @@
 
 Motor motor = Motor(ID_MAIN_MOTOR, 19);
 Helm helm = Helm(ID_MAIN_HELM, 18);
+GetChangeLevel chargeLevel = GetChangeLevel(ID_CHARGE_LEVEL, 17);
+
 ShipAPI shipAPI = ShipAPI();
 GetChangeLevel chLevel = GetChangeLevel(ID_CHARGE_LEVEL, 34);
 
@@ -18,6 +20,7 @@ void setup()
 
   shipAPI.controller.use(&helm);
   shipAPI.controller.use(&motor);
+  shipAPI.controller.use(&chLevel);
   shipAPI.init();
 }
 
