@@ -5,6 +5,7 @@
 
 #include <Arduino.h>
 #include "ModuleShip.h"
+#include <stdexcept>
 
 class Controller
 {
