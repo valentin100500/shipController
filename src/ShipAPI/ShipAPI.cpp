@@ -41,7 +41,7 @@ void ShipAPI::begin()
     }
 }
 
-String queryParse(Request &req, char *query)
+String queryParse(Request &req, const char *query)
 {
     char valueBuf[5];
     req.query(query, valueBuf, 5);
