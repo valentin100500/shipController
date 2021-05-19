@@ -1,5 +1,3 @@
-#define DEVELOP
-
 #ifndef CONTROLLER
 #define CONTROLLER
 

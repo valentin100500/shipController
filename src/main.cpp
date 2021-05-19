@@ -1,7 +1,7 @@
 #define DEVELOP
 
 #include <Arduino.h>
-#include "WIFI/WIFIInit.h"
+#include <WIFIInit.h>
 #include "Modules/Modules.h"
 #include "ShipAPI/ShipAPI.h"
 #include "IDs.h"

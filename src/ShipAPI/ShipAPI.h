@@ -3,7 +3,7 @@
 
 #include <aWOT.h>
 #include <WiFi.h>
-#include "../Controller/Controller.h"
+#include <Controller.h>
 
 class ShipAPI
 {
