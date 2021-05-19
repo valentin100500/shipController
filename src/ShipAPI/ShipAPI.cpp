@@ -29,9 +29,6 @@ void ShipAPI::init()
 
         localShipAPI = this;
         isShipAPIDef = true;
-#ifdef DEVELOP
-        Serial.println("Server init");
-#endif
     }
 }
 
