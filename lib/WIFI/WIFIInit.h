@@ -4,7 +4,6 @@
 #include<WiFi.h>
 #include"WIFIAPInit.h"
 
-void WiFiInit(String _ssid, String _passwd);
-void WiFiInit();
+void WiFiInit(wifi_mode_t mode, String _ssid, String _passwd);
 
 #endif
