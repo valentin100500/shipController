@@ -4,6 +4,6 @@
 #include <Arduino.h>
 #include <WiFi.h>
 
-void WIFIAPInit();
+void WIFIAPInit(String _ssid, String _passw);
 
 #endif
