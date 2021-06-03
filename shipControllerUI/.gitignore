@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+/shipControllerUI/src/react-app-env.d.ts
 
 # testing
 /coverage
