@@ -6,8 +6,8 @@
 #include "ShipAPI/ShipAPI.h"
 #include "IDs.h"
 
-const char *ssid = "shipController";
-const char *password = "";
+char *ssid = "shipController";
+char *password = "";
 
 Motor motor = Motor(ID_MAIN_MOTOR, 19);
 Helm helm = Helm(ID_MAIN_HELM, 18);
