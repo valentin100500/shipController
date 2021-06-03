@@ -1,9 +1,9 @@
 #include "WIFIInit.h"
 
-void WiFiInit(String _ssid, String _passwd)
+void WiFiInit(char *_ssid, char *_passwd)
 {
   WiFi.mode(WIFI_STA);
-  WiFi.begin(_ssid.c_str(), _passwd.c_str());
+  WiFi.begin(_ssid, _passwd);
 
   Serial.println(String("Conecting to ") + _ssid);
   Serial.println();
@@ -25,7 +25,7 @@ void WiFiInit(String _ssid, String _passwd)
   }
   else
   {
-    Serial.println("Error! Not connection on " + _ssid + "!");
+    Serial.println("Error! Not connection on " + String(_ssid) + "!");
     Serial.println();
     try
     {
@@ -41,7 +41,7 @@ void WiFiInit(String _ssid, String _passwd)
   Serial.println("IP address: " + WiFi.localIP().toString());
 }
 
-void WiFiInit(wifi_mode_t mode, String _ssid, String _passw)
+void WiFiInit(wifi_mode_t mode, char *_ssid, char *_passw)
 {
   if (mode == WIFI_AP)
   {
