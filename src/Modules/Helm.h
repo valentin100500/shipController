@@ -7,7 +7,7 @@
 class Helm : public ModuleShip
 {
 private:
-    int mapingRunValue(int);
+    int mapingValue(int);
     Servo servo;
 
 public:

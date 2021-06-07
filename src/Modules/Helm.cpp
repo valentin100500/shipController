@@ -7,14 +7,14 @@ Helm::Helm(String id, uint8_t pin) : ModuleShip(id)
     set("0");
 }
 
-int Helm::mapingRunValue(int value)
+int Helm::mapingValue(int value)
 {
     return map(value, -10, 10, 0, 180);
 }
 
 void Helm::set(String value)
 {
-    this->servo.write(mapingRunValue(value.toInt()));
+    this->servo.write(mapingValue(value.toInt()));
     Serial.println("Value of helm: " + value);
 }
 
