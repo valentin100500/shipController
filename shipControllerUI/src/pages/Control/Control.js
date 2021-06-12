@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './Control.module.scss'
 import ControlBoxContainer from "../../components/ControlBox/ControlBoxContainer";
 
-const Control = (props) => {
+const Control = () => {
     return (
         <div className={classes.control}>
             <ControlBoxContainer />
